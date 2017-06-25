@@ -18,6 +18,8 @@ $ ./run_test_dna.sh
 $ ./run_test_english.sh
 ```
 
+## Copy datasets "dna.rep" and "english.rep" into Datasets/:
+
 Output files have the format:
 ```sh
 threads,time,ref_mb,n_partitions,n_blocks,cache-misses,size
