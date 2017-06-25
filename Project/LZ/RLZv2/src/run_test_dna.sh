@@ -16,7 +16,7 @@ do
 	    do
 	        for j in 1 2 4 6 8 10 12 # iterate over cores
 	        do
-		    let MAX_MEM_MB=$((5 * ${REF_MB} + 400 / ${N_BLOCKS} +1)) # Calculate memory for N_BLOCKS
+		    let MAX_MEM_MB=$((5 * ${REF_MB} + 350 / ${N_BLOCKS} +1)) # Calculate memory for N_BLOCKS
 		    echo -n ${j}, >> ${outfile}
 		    CILK_NWORKERS=${j} perf stat -o perf.tmp -x, -e cache-misses \
       		    bash rlz_parser.sh ${dataset} ./out ${REF_MB} ${N_PART} ${MAX_MEM_MB} >> ${outfile}
